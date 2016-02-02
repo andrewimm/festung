@@ -1,0 +1,73 @@
+<html>
+<head>
+<style>
+body {
+  background: #000;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+canvas {
+  display: block;
+  margin: 0 auto;
+  background: #000;
+}
+#controls {
+  width: 200px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  color: #ddd;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 10px;
+  background: rgba(0,0,0,0.4);
+}
+#controls td:first-child {
+  width: 80px;
+}
+.key {
+  vertical-align: top;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid #eee;
+  margin: 2px;
+}
+.key.nokey {
+  border-color: transparent;
+}
+.key.freesize {
+  width: auto;
+  padding: 0 4px ;
+}
+</style>
+<script src="festung.js"></script>
+</head>
+<body>
+<table id="controls">
+  <tr>
+    <td>
+      <span class="key nokey"></span><span class="key">w</span><span class="key nokey"></span>
+      <span class="key">a</span><span class="key">s</span><span class="key">d</span>
+    </td>
+    <td>Navigation</td>
+  </tr>
+  <tr>
+    <td><span class="key">&larr;</span><span class="key">&rarr;</span></td>
+    <td>Turn</td>
+  </tr>
+  <tr>
+    <td><span class="key freesize">Shift</span></td>
+    <td>Run</td>
+  </tr>
+</table>
+<canvas id="viewport"></canvas>
+<script>
+new Festung(document.getElementById('viewport'));
+</script>
+</body>
+</html>

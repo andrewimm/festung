@@ -25,7 +25,7 @@ var F = function(canvas) {
   this.viewport.width = viewWidth * this.scale;
   this.viewport.height = viewHeight * this.scale;
 
-  this.cx = viewport.getContext('2d');
+  this.cx = this.viewport.getContext('2d');
   this.cx.webkitImageSmoothingEnabled = false;
   this.cx.mozImageSmoothingEnabled = false;
   this.cx.imageSmoothingEnabled = false;
